@@ -1,38 +1,80 @@
-.App {
+:root{
+  --customDark:#302f2d;
+  --customWhite:#c9c7c1;
+}
+body{
+  background: var(--customDark);
+
+}
+.header{
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 3rem;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* temp sensor */
+.main-box{
+  background: var(--customWhite);
+  position: relative;
+  max-width: 50rem;
+  height: 30rem;
+  margin:0 auto;
+  border: 2px solid black;
+  border-radius: 1rem;
+}
+.tempData {
+  display: inline;
+  margin-left: 20%;
+}
+.humidityData{
+  display: inline;
+  margin-left: 7rem;
+}
+.tempDisplay{
+  display: inline;
+  margin-left: 25%;
+  margin-top: 2rem;
+}
+.humidityDisplay{
+  display: inline;
+  margin-left: 9rem;
+}
+/* .dataBox{
+  border: 2px solid black;
+  max-width: 50rem;
+  height: 125%;
+  color:red;
+} */
+.tempBtn{
+  margin-top: 2rem;
+  margin-left: 30%;
+  margin-bottom: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* led */
+.toggleBtn{
+  position: absolute;
+  bottom: 100px;
+  left:20%;
+}
+.blinkBtn{
+  position: absolute;
+  bottom: 50px;
+  left:20%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.errMsg{
+  color:red;
+  position: absolute;
+  bottom: 200px;
+  left:30%;
+  border: 1px solid black;
+  display: block;
+  transition: ease-in 500ms;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* img */
+.tntu-img{
+  width: 10%;
+  background-color: black;
 }
